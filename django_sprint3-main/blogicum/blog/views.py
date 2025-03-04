@@ -24,6 +24,8 @@ def index(request):
 def category_posts(request, slug):
 
     category = get_object_or_404(Category, slug=slug, is_published=True)
+
+
     posts = category.post_set.filter(
         pub_date__lte=now(),
         is_published=True

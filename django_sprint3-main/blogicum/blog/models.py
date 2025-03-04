@@ -4,7 +4,6 @@ from django.utils.translation import gettext_lazy as _
 
 User = get_user_model()
 
-
 class Category(models.Model):
     title = models.CharField(
         max_length=256,
@@ -78,20 +77,20 @@ class Post(models.Model):
     )
     author = models.ForeignKey(
         User,
-        on_delete=models.CASCADE,
+        on_delete=models.CASCADE,  # Каскадное удаление при удалении автора
         verbose_name=_('Автор публикации')
     )
     location = models.ForeignKey(
         Location,
         null=True,
         blank=True,
-        on_delete=models.SET_NULL,
+        on_delete=models.SET_NULL,  # Установить NULL при удалении местоположения
         verbose_name=_('Местоположение')
     )
     category = models.ForeignKey(
         Category,
         null=True,
-        on_delete=models.SET_NULL,
+        on_delete=models.SET_NULL,  # Установить NULL при удалении категории
         verbose_name=_('Категория')
     )
     is_published = models.BooleanField(

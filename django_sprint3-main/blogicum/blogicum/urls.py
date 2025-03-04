@@ -11,3 +11,4 @@ urlpatterns = [
     path('pages/', include('pages.urls', namespace='pages')),
 
 ]
+

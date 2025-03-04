@@ -67,7 +67,10 @@ USE_L10N = True
 
 TIME_ZONE = 'Europe/Moscow'
 
+
+
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / 'static_dev']
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
