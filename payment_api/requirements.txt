@@ -1,0 +1,7 @@
+sanic
+sqlalchemy[asyncio]
+asyncpg
+alembic
+python-jose[cryptography]
+python-dotenv
+pydantic>=1.9.0
